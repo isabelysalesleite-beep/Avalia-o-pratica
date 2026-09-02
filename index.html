@@ -1,0 +1,100 @@
+<!DOCTYPE1 html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio aos Idosos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Como Ajudar Nossos Idosos</h1>
+        <p>Pequenas atitudes que transformam vidas.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Dicas Práticas</h2>
+            <ul>
+                <li>Ofereça companhia e escuta ativa.</li>
+                <li>Auxilie em tarefas do dia a dia e compras.</li>
+                <li>Ensine a usar tecnologias de forma paciente.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Precisa de Ideias?</h2>
+            <button id="btn-acao">Gerar Ação do Dia</button>
+            <p id="mensagem-acao"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+ul {
+    text-align: left;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #219150;
+}
+
+#mensagem-acao {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+const acoes = [
+    "Ligue para um parente idoso hoje para saber como ele está.",
+    "Ajude um vizinho idoso a carregar as sacolas.",
+    "Enfrente a fila com paciência e ceda o lugar de preferência.",
+    "Ensine um idoso a fazer uma chamada de vídeo."
+];
+
+document.getElementById('btn-acao').addEventListener('click', () => {
+    const indice = Math.floor(Math.random() * acoes.length);
+    document.getElementById('mensagem-acao').textContent = acoes[indice];
+});
