@@ -1,100 +1,54 @@
-<!DOCTYPE1 html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoio aos Idosos</title>
+    <title>Cuidar Bem - Apoio e Acessibilidade para Idosos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Como Ajudar Nossos Idosos</h1>
-        <p>Pequenas atitudes que transformam vidas.</p>
+        <div class="logo">Cuidar<span>Bem</span></div>
+        <nav>
+            <a href="#cuidados">Cuidados</a>
+            <a href="#rotina">Rotina</a>
+            <a href="#acessibilidade">Acessibilidade</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="card">
-            <h2>Dicas Práticas</h2>
+    <section class="hero">
+        <h1>Promovendo qualidade de vida e bem-estar para os idosos</h1>
+        <p>Dicas práticas sobre rotina, segurança adaptada e cuidados diários.</p>
+    </section>
+
+    <main class="container">
+        
+        <section id="cuidados" class="card">
+            <h2>Cuidados Diários</h2>
             <ul>
-                <li>Ofereça companhia e escuta ativa.</li>
-                <li>Auxilie em tarefas do dia a dia e compras.</li>
-                <li>Ensine a usar tecnologias de forma paciente.</li>
+                <li><strong>Alimentação Balanceada:</strong> Priorize refeições ricas em fibras, cálcio e proteínas, mantendo uma boa hidratação ao longo do dia.</li>
+                <li><strong>Acompanhamento Médico:</strong> Mantenha a medicação nos horários corretos e organize as consultas de rotina.</li>
+                <li><strong>Saúde Mental:</strong> Incentive atividades que estimulem a memória, como leitura, jogos de tabuleiro e conversas diárias.</li>
             </ul>
         </section>
 
-        <section class="card">
-            <h2>Precisa de Ideias?</h2>
-            <button id="btn-acao">Gerar Ação do Dia</button>
-            <p id="mensagem-acao"></p>
+        <section id="rotina" class="card">
+            <h2>Organização da Rotina</h2>
+            <ul>
+                <li><strong>Horários Fixos:</strong> Estabeleça rotinas para acordar, comer e dormir para melhorar a qualidade do sono.</li>
+                <li><strong>Atividade Física Legítima:</strong> Estimule caminhadas leves ou alongamentos adaptados com autorização médica.</li>
+                <li><strong>Momentos de Lazer:</strong> Reserve momentos para hobbies, artesanato, jardinagem ou ouvir música.</li>
+            </ul>
         </section>
-    </main>
 
-    <script src="script.js"></script>
-</body>
-</html>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f9;
-    color: #333;
-    text-align: center;
-}
+        <section id="acessibilidade" class="card">
+            <h2>Acessibilidade e Segurança em Casa</h2>
+            <ul>
+                <li><strong>Prevenção de Quedas:</strong> Remova tapetes soltos e mantenha os corredores livres de obstáculos.</li>
+                <li><strong>Iluminação Adequada:</strong> Instale luzes noturnas nos trajetos entre o quarto e o banheiro.</li>
+                <li><strong>Adaptações no Banheiro:</strong> Coloque barras de apoio no box e ao lado do vaso sanitário, além de piso antiderrapante.</li>
+            </ul>
+        </section>
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 2rem;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-.card {
-    background: white;
-    padding: 1.5rem;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 400px;
-    width: 100%;
-}
-
-ul {
-    text-align: left;
-}
-
-button {
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #219150;
-}
-
-#mensagem-acao {
-    margin-top: 1rem;
-    font-weight: bold;
-    color: #2c3e50;
-}
-const acoes = [
-    "Ligue para um parente idoso hoje para saber como ele está.",
-    "Ajude um vizinho idoso a carregar as sacolas.",
-    "Enfrente a fila com paciência e ceda o lugar de preferência.",
-    "Ensine um idoso a fazer uma chamada de vídeo."
-];
-
-document.getElementById('btn-acao').addEventListener('click', () => {
-    const indice = Math.floor(Math.random() * acoes.length);
-    document.getElementById('mensagem-acao').textContent = acoes[indice];
-});
+        <section class
